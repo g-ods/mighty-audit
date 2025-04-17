@@ -158,6 +158,7 @@ library ReserveLogic {
         uint256 newTotalBorrows = reserve.totalBorrows;
 
         if (reserve.totalBorrows > 0) {
+            
             newBorrowingIndex = latestBorrowingIndex(reserve);
             newTotalBorrows = newBorrowingIndex.mul(reserve.totalBorrows).div(reserve.borrowingIndex);
 
